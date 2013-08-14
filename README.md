@@ -1,3 +1,9 @@
+# TODO
+
+[ ] put initial paper on git for versioning.
+[ ] create table of content.
+[ ] define large scale operations.
+[ ] ...
 
 # Scaling XMPP
 
@@ -9,23 +15,24 @@ Scaling XMPP will take a lot of skills.
 My view is that to get the best performance, you have to know and observe how the system behave in real world situation, for the specific use case. XMPP is a large protocol, especially with tons of XMPP Extension Protocols that have been added over time (at present time > 340). If you want to scale you have to have a perfect knowledge of your XMPP server inside and out, but also a perfect knowledge of the XMPP protocol itself. Some requirements or suggested approach in the protocol do not scale out of the specification, and you have to take into account a full solution design, from the client behaviour itself to the cluster architecture and code optimizations.
 
 
-
+<!--
 https://projects.tigase.org/projects/xmppscaling/wiki
+-->
 
 ## Definition of Large scale
 
 Large scale in terms of:
 
--Registered users
--Simultaneous users
--Throughput of messages
+* Registered users
+* Simultaneous users
+* Throughput of messages
 
 many users needs automation of jobs for maintaining the server
 
 
--uptime!
--scale 
--deployable and easy to manage and upgrade (live)!
+* uptime!
+* scale 
+* deployable and easy to manage and upgrade (live)!
 
 restarting server -- storm of reconnects.. make sure that the server can throttle the dufferent types of connections
 - besides hitting your own servers it will generate presence for S2S connections!
@@ -43,10 +50,10 @@ restarting server -- storm of reconnects.. make sure that the server can throttl
 -pub/sub
 -off line storage (linmit the size.. it could grow enormously!)
 
--is your XMPP public for registering for users? abuse/attacks easier
--is your XMPP public and have anonymous logins?
--is your XMPP public but not open for registering?
--is your XMPP private in a silo and in a controlled environment?
+* is your XMPP public for registering for users? abuse/attacks easier
+* is your XMPP public and have anonymous logins?
+* is your XMPP public but not open for registering?
+* is your XMPP private in a silo and in a controlled environment?
 
 ## Knowing your XMPP Server
 
@@ -55,12 +62,12 @@ Getting a stacktrace from Erlang if you do not understand erlang can be a pain. 
 
 ### Tune your XMPP server
 
-- many servers supports turning off features such as ... 
-- JVM tuning if your server runs on a JVM
-- EVM (erlang)
+* many servers supports turning off features such as ... 
+* JVM tuning if your server runs on a JVM
+* EVM (erlang)
 
-- Physical vs Hosted / cloud solutions
-- RAM in host.. depends on the number of connections, their buddy list etc. that are held in memory
+* Physical vs Hosted / cloud solutions
+* RAM in host.. depends on the number of connections, their buddy list etc. that are held in memory
 
 
 XEP-198
@@ -78,9 +85,9 @@ both c2s and c2s
 
 
 ## Network 
-- Load balancer in front (if using multiple endpoints (connection managers))
-- split up XMPP server and BOSH/websocket frontend (seperate conenction managers)
-- stream compression (zlib/EXI) for constrained network (might take a lot of CPU on client)
+* Load balancer in front (if using multiple endpoints (connection managers))
+* split up XMPP server and BOSH/websocket frontend (seperate conenction managers)
+* stream compression (zlib/EXI) for constrained network (might take a lot of CPU on client)
 
 
 
@@ -155,14 +162,14 @@ Tsung -... load test what your app actually does. proxy it and replay the sessio
 
 Monitor for detecting troubles of performance and eventual attacks.
 
--Large bandwidth consumption
--Many packets of stanzas of a special kind, could be an attack or a error
--Patterns of traffic ... limit those through throtteling
+* Large bandwidth consumption
+* Many packets of stanzas of a special kind, could be an attack or a error
+* Patterns of traffic ... limit those through throtteling
 
 ### Attacks and maintenance
 
--attacks might slow down your server and stop new users for connecting
--abuse
+* attacks might slow down your server and stop new users for connecting
+* abuse
 
 
 
@@ -170,4 +177,4 @@ Monitor for detecting troubles of performance and eventual attacks.
 
 # Links
 
-http://highscalability.com/blog/2012/8/27/zoosk-the-engineering-behind-real-time-communications.html
+* http://highscalability.com/blog/2012/8/27/zoosk-the-engineering-behind-real-time-communications.html
