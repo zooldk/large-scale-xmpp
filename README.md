@@ -1,9 +1,22 @@
-# TODO
 
-[ ] put initial paper on git for versioning.
-[ ] create table of content.
-[ ] define large scale operations.
-[ ] ...
+# Introduction / Warning :-)
+
+> This is a paper that is work in progresss!. This is my own personal notes that hopefully will turn into somekind of white paper on how you most likely can scale you XMPP applications, depending on your needs, context etc. Right now they are loose notes and thoughts that should NOT be used for scaling your environment.
+
+## TODO
+
+- [x] Put initial paper on git for versioning.
+- [ ] Create table of content.
+- [ ] Define large scale operations.
+- [ ] ...
+- [ ] ...
+- [ ] Proof read
+- [ ] "Release" first draft
+
+# Authors
+
+Names, background etc.
+
 
 # Scaling XMPP
 
@@ -39,16 +52,16 @@ restarting server -- storm of reconnects.. make sure that the server can throttl
 
 ## Knowing your application
 
--what stanzas will your app send the most?
-	-presence
-	-iq (buddy list) server should support roster versioning
-	-message
--which transport will the client use? (TCP, BOSH, Websockets)
--client mobility? (is it a mobile app?.. network changes might have something to say)
--components for business logic.. remember to scale those as well
--muc
--pub/sub
--off line storage (linmit the size.. it could grow enormously!)
+* what stanzas will your app send the most?
+	* presence
+	* iq (buddy list) server should support roster versioning
+	* message
+* which transport will the client use? (TCP, BOSH, Websockets)
+* client mobility? (is it a mobile app?.. network changes might have something to say)
+* components for business logic.. remember to scale those as well
+* muc
+* pub/sub
+* off line storage (linmit the size.. it could grow enormously!)
 
 * is your XMPP public for registering for users? abuse/attacks easier
 * is your XMPP public and have anonymous logins?
@@ -102,7 +115,7 @@ Not all supports clustering..
 
 
 
-BOSH vs WebSockets:
+### BOSH vs WebSockets
 
 latency: While the BOSH draft document claims very low-latency, it will be difficult for
 BOSH to compete with WebSockets. Unless you have ideal conditions where HTTP/1.1 is
