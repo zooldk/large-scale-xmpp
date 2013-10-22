@@ -190,15 +190,16 @@ Monitor for detecting troubles of performance and eventual attacks.
 # Appendix
 
 ## XMPP Server Matrix
+Comparison are made with the latest versions of the servers.
 
 | Server | WebSocket | XEP-0198 | XEP-0273 | Roster Versioning  | Clustering 	| Compress 	| BOSH | Language | Maturity|
 |--------|-----------|----------|-----------|-------------------|---------------|-----------|------|----------|---------|
-| Prosody 		| X  | 	 X		|			|		X			| - 			| 			|	   | Lua / C  | 		|
-| Tigase		| X  |	(X)		|			|		X			| X				|		  	|	   | Java 	  | 		|
-| Ejabberd   	| -  |	 ?		|			|		?			| X				|		  	|	   | Erlang   | 		|
-| Mongoose IM	| X  |	 ?		|			|		?			| X				|		  	|	   | Erlang   | 		|
-| Jabber     	| -  |	 ?		|			|		?			| - 			|		  	|	   | C        | 		|
-
+| Prosody 		| X  | 	 X		|			|		X			| - 			| 			|	X  | Lua / C  | 		|
+| Tigase		| X  |	(X)		|			|		X			| X				|		  	|	X  | Java 	  | 		|
+| Ejabberd   	| -  |	 ?		|			|		X			| X				|		  	|	X  | Erlang   | 		|
+| Mongoose IM	| X  |	 ?		|			|		X			| X				|		  	|	X  | Erlang   | 		|
+| jabberd      	| -  |	 ?		|			|		?			| - 			|		  	|	?  | C        | 		|
+| Openfire     	| X  |	 ?		|			|		X			| X (Hazelcast)	|		  	|	X  | C        | 		|
 
 
 # Links
