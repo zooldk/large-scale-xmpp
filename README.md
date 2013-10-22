@@ -8,16 +8,18 @@
 - [x] Put initial paper on git for versioning.
 - [ ] Create table of content.
 - [ ] Define large scale operations.
+- [ ] Table of XMPP server features
 - [ ] ...
 - [ ] ...
 - [ ] Proof read
 - [ ] "Release" first draft
 
+
 # Authors
 
-Names, background etc.
+* Steffen Larsen, 
 
-
+	
 # Scaling XMPP
 
 Intro...
@@ -185,6 +187,17 @@ Monitor for detecting troubles of performance and eventual attacks.
 * abuse
 
 
+# Appendix
+
+## XMPP Server Matrix
+
+| Server | WebSocket | XEP-0198 | XEP-0273 | Roster Versioning  | Clustering 	| Compress 	| BOSH | Language | Maturity|
+|--------|-----------|----------|-----------|-------------------|---------------|-----------|------|----------|---------|
+| Prosody 		| X  | 	 X		|			|		X			| - 			| 			|	   | Lua / C  | 		|
+| Tigase		| X  |	(X)		|			|		X			| X				|		  	|	   | Java 	  | 		|
+| Ejabberd   	| -  |	 ?		|			|		?			| X				|		  	|	   | Erlang   | 		|
+| Mongoose IM	| X  |	 ?		|			|		?			| X				|		  	|	   | Erlang   | 		|
+| Jabber     	| -  |	 ?		|			|		?			| - 			|		  	|	   | C        | 		|
 
 
 
