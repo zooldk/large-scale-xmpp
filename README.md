@@ -8,7 +8,7 @@
 - [x] Put initial paper on git for versioning.
 - [ ] Create table of content.
 - [ ] Define large scale operations.
-- [ ] Table of XMPP server features
+- [x] Table of XMPP server features
 - [ ] ...
 - [ ] ...
 - [ ] Proof read
